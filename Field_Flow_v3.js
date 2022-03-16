@@ -2,7 +2,7 @@
 let w;
 let particles = [];
 let mult = 0.008;
-let graphicx = 150;
+let graphicx = 160;
 const noiseScale = 0.01/2;
 let clouds = [];
 let max_speed = 34;
@@ -142,9 +142,7 @@ function draw() {
   }
   
   let densityfactor = 1;
-  if(speed/34 < 0.1){
-    densityfactor = 0.75;
-  }
+
   
   for (var i = 0; i < particles.length*densityfactor; i++) {
  
@@ -193,11 +191,11 @@ function draw() {
   let forecastTime = w.getTime();
   // show the time at the bottom of the screen
   textAlign(LEFT);
-  text("Today, "+ forecastTime.hourMinuteLong(), rwidth/8, 60);
+  text("Today, "+ forecastTime.hourMinuteLong(), rwidth/16, 60);
   textStyle(BOLD);
-  text(w.getSummary(), rwidth/8, 80);
+  text(w.getSummary(), rwidth/16, 80);
   textStyle(NORMAL);
-  line(rwidth/8, 100, rwidth*7/8, 100);
+  line(rwidth/16, 100, rwidth*15/16, 100);
   
   textAlign(RIGHT);
 
@@ -207,7 +205,7 @@ function draw() {
   
   textStyle(NORMAL);
   if (place != null) {
-      text(place.city + ', ' + place.state_short, rwidth*7/8, 60);
+      text(place.city + ', ' + place.state_short, rwidth*15/16, 60);
   }
   
   textStyle(NORMAL);
@@ -216,16 +214,16 @@ function draw() {
   
   textAlign(LEFT);
   fill(80);
-  textSize(28);
-  text(round(speed, 1), rwidth*1/8, 160);
+  textSize(32);
+  text(round(speed, 1), rwidth*1/16, 160);
   textSize(12);
-  text("mph", rwidth*1/8, 185);
+  text("Mph", rwidth*1/16, 190);
   
   textAlign(RIGHT);
-  textSize(28);
-  text(round(t), rwidth*7/8, 160);  
+  textSize(32);
+  text(round(t), rwidth*15/16, 160);  
   textSize(12);
-  text("Fahrenheit ", rwidth*7/8, 185);
+  text("Fahrenheit ", rwidth*15/16, 190);
   textSize(12);
   fill(210);
   
@@ -280,12 +278,12 @@ function draw() {
     //textStyle(CENTER);
     textAlign(RIGHT);
     fill(210);
-    text(speed_summary , rwidth*7/8, 80);
+    text(speed_summary , rwidth*15/16, 80);
     textStyle(NORMAL);
   }
   
   fill(255);
-  line(rwidth/8, 675, rwidth*7/8, 675);
+  line(rwidth/16, 675, rwidth*15/16, 675);
   //The Wind is Currently Moving at 184 
   // Degrees, at 5.8 Mph.
 
