@@ -114,7 +114,7 @@ function draw() {
 
   
     
-  t =  t+30;
+  t =  t;
   p =  t; // t;
   
   let red_impact = 0;
